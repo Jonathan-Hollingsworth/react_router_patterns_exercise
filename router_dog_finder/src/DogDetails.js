@@ -8,6 +8,7 @@ function DogDetails({dogsByName}) {
         <div className="dog">
             <h1>{dog.name}</h1>
             <img src={`${dog.src}`}/>
+            <br />
             <b>Age {dog.age}</b>
             <ul>
                 {dog.facts.map(fact => <li>{fact}</li>)}
