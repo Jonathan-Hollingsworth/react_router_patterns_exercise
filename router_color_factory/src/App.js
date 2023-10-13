@@ -13,14 +13,13 @@ function App() {
 
   function addColor(color) {
       let newColor = {...color, id: uuid()}
-      setColors(colors => [...colors, newColor])
+      setColors(colors => [newColor, ...colors])
   }
 
   const colorsByName = {}
   for (const color of colors) {
     colorsByName[color.name.toLowerCase()] = color
   }
-  console.log(colorsByName)
 
   return (
     <div className="App">
